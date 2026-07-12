@@ -1,6 +1,6 @@
 // Simple Product Details Controller
-import { products } from './data.js?v=2';
-import { addToCart } from './app.js?v=2';
+import { products } from './data.js?v=3';
+import { addToCart } from './app.js?v=3';
 
 export function initProductDetails() {
   const container = document.getElementById('product-details-container');

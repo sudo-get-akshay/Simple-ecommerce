@@ -1,5 +1,5 @@
 // Simple Cart Page Controller
-import { getCart, updateCartQty, removeFromCart } from './app.js?v=2';
+import { getCart, updateCartQty, removeFromCart } from './app.js?v=3';
 
 export function initCartPage() {
   const cartGrid = document.getElementById('cart-items-panel');
