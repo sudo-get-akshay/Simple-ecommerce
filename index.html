@@ -201,10 +201,10 @@
   </footer>
 
   <!-- Application Scripts -->
-  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/app.js?v=2"></script>
   <script type="module">
-    import { products } from './js/data.js';
-    import { addToCart } from './js/app.js';
+    import { products } from './js/data.js?v=2';
+    import { addToCart } from './js/app.js?v=2';
     
     // Dynamically query and render featured products
     const featuredList = products.filter(p => p.tag === 'Best Seller' || p.tag === 'Premium' || p.tag === 'Top Rated').slice(0, 4);

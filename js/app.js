@@ -1,5 +1,5 @@
 // Simple E-commerce Application Orchestrator
-import { CONFIG } from './config.js';
+import { CONFIG } from './config.js?v=2';
 
 // ==========================================================================
 // Theme Management

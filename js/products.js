@@ -1,6 +1,6 @@
 // Simple Catalog Page Controller
-import { products } from './data.js';
-import { addToCart } from './app.js';
+import { products } from './data.js?v=2';
+import { addToCart } from './app.js?v=2';
 
 let activeCategory = 'all';
 let searchQuery = '';

@@ -1,5 +1,5 @@
 // Simple Checkout Page Controller
-import { getCart, clearCart, initClerk, showToast } from './app.js';
+import { getCart, clearCart, initClerk, showToast } from './app.js?v=2';
 
 let clerkInstance = null;
 
