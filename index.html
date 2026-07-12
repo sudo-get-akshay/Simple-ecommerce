@@ -203,8 +203,18 @@
   <!-- Application Scripts -->
   <script type="module" src="js/app.js?v=2"></script>
   <script type="module">
-    import { products } from './js/data.js?v=2';
+    import { products, generateProductSvg } from './js/data.js?v=2';
     import { addToCart } from './js/app.js?v=2';
+    
+    // Set category background SVGs and hero image dynamically to work offline
+    const heroImg = document.querySelector('.hero-img');
+    if (heroImg) heroImg.src = generateProductSvg("Simple Wireless Charger", "charging", "charger", 1);
+    const categoryBgs = document.querySelectorAll('.category-bg');
+    if (categoryBgs.length >= 3) {
+      categoryBgs[0].src = generateProductSvg("Workspace", "workspace", "keyboard", 1);
+      categoryBgs[1].src = generateProductSvg("Audio", "audio", "headphones", 1);
+      categoryBgs[2].src = generateProductSvg("Lifestyle", "lifestyle", "diffuser", 1);
+    }
     
     // Dynamically query and render featured products
     const featuredList = products.filter(p => p.tag === 'Best Seller' || p.tag === 'Premium' || p.tag === 'Top Rated').slice(0, 4);

@@ -1,7 +1,7 @@
 // Simple - Premium Minimalist Lifestyle Products Database
 
 // SVG Vector Image Generation Helper (Offline-friendly, zero network dependencies)
-function generateProductSvg(name, category, type, angle = 1) {
+export function generateProductSvg(name, category, type, angle = 1) {
   let iconMarkup = '';
   
   if (type === 'charger') {
@@ -211,9 +211,9 @@ function generateProductSvg(name, category, type, angle = 1) {
     </svg>
   `;
 
-  // Compress spacing and return escaped data URL
+  // Compress spacing and return base64 encoded data URL
   const cleanedSvg = svg.replace(/\s+/g, ' ').trim();
-  return "data:image/svg+xml;utf8," + cleanedSvg;
+  return "data:image/svg+xml;base64," + btoa(cleanedSvg);
 }
 
 export const products = [
