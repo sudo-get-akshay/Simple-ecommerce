@@ -211,8 +211,8 @@ export function generateProductSvg(name, category, type, angle = 1) {
     </svg>
   `;
 
-  // Compress spacing and return base64 encoded data URL
-  const cleanedSvg = svg.replace(/\s+/g, ' ').trim();
+  // Compress spacing, restore # symbols, and return base64 encoded data URL
+  const cleanedSvg = svg.replace(/\s+/g, ' ').replace(/%23/g, '#').trim();
   return "data:image/svg+xml;base64," + btoa(cleanedSvg);
 }
 
