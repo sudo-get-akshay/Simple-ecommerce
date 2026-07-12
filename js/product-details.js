@@ -95,7 +95,7 @@ function renderDetails(product, container) {
           <span class="details-reviews-count">(${product.reviewsCount} verified reviews)</span>
         </div>
         
-        <div class="details-price">$${product.price}</div>
+        <div class="details-price">₹${product.price.toLocaleString('en-IN')}</div>
         
         <p class="details-desc">${product.shortDescription}</p>
         

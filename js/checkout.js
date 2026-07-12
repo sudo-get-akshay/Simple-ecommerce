@@ -49,18 +49,18 @@ function renderCheckoutSummary(cart) {
   summaryList.innerHTML = cart.map(item => `
     <div class="checkout-summary-item">
       <span class="checkout-summary-name">${item.name} <span style="font-size: 0.8rem; color: var(--text-secondary);">x${item.qty}</span></span>
-      <span>$${(item.price * item.qty).toFixed(2)}</span>
+      <span>₹${(item.price * item.qty).toLocaleString('en-IN')}</span>
     </div>
   `).join('');
   
   // Calculate pricing
   const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-  const delivery = subtotal > 150 ? 0 : 15;
+  const delivery = subtotal > 5000 ? 0 : 150;
   const total = subtotal + delivery;
   
-  if (subtotalEl) subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
-  if (deliveryEl) deliveryEl.textContent = delivery === 0 ? 'Free' : `$${delivery.toFixed(2)}`;
-  if (totalEl) totalEl.textContent = `$${total.toFixed(2)}`;
+  if (subtotalEl) subtotalEl.textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+  if (deliveryEl) deliveryEl.textContent = delivery === 0 ? 'Free' : `₹${delivery.toLocaleString('en-IN')}`;
+  if (totalEl) totalEl.textContent = `₹${total.toLocaleString('en-IN')}`;
 }
 
 function showCheckoutForm() {
@@ -136,7 +136,7 @@ function handleOrderSubmit(e) {
   // Calculate pricing
   const cart = getCart();
   const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-  const delivery = subtotal > 150 ? 0 : 15;
+  const delivery = subtotal > 5000 ? 0 : 150;
   const total = subtotal + delivery;
   
   // 1. Generate Order ID Reference

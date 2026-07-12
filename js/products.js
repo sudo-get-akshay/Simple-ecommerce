@@ -136,7 +136,7 @@ function renderCatalog() {
           </div>
           <a href="product-details.html?id=${product.id}" class="product-name-link">${product.name}</a>
           <div class="product-bottom">
-            <span class="product-price">$${product.price}</span>
+            <span class="product-price">₹${product.price.toLocaleString('en-IN')}</span>
             <a href="product-details.html?id=${product.id}" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.75rem;">View</a>
           </div>
         </div>

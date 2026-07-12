@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   if (orderRefEl) orderRefEl.textContent = receipt.orderRef;
   if (emailEl) emailEl.textContent = receipt.email;
-  if (totalEl) totalEl.textContent = `$${receipt.total.toFixed(2)}`;
+  if (totalEl) totalEl.textContent = `₹${receipt.total.toLocaleString('en-IN')}`;
   
   // Optional: clear receipt after page leave to prevent repeat loads
   // window.addEventListener('beforeunload', () => {

@@ -35,15 +35,15 @@ function renderCart() {
         <h2 class="summary-title">Summary</h2>
         <div class="summary-row">
           <span>Subtotal</span>
-          <span>$0.00</span>
+          <span>₹0.00</span>
         </div>
         <div class="summary-row">
           <span>Delivery</span>
-          <span>$0.00</span>
+          <span>₹0.00</span>
         </div>
         <div class="summary-row summary-row--total">
           <span>Total</span>
-          <span>$0.00</span>
+          <span>₹0.00</span>
         </div>
         <button class="btn btn-primary" disabled>Checkout</button>
       </div>
@@ -73,7 +73,7 @@ function renderCart() {
         </div>
       </div>
       
-      <div class="cart-item-price" data-label="Price">$${item.price}</div>
+      <div class="cart-item-price" data-label="Price">₹${item.price.toLocaleString('en-IN')}</div>
       
       <div class="cart-item-quantity" data-label="Quantity">
         <div class="quantity-selector">
@@ -83,7 +83,7 @@ function renderCart() {
         </div>
       </div>
       
-      <div class="cart-item-subtotal" data-label="Total">$${(item.price * item.qty)}</div>
+      <div class="cart-item-subtotal" data-label="Total">₹${(item.price * item.qty).toLocaleString('en-IN')}</div>
     </div>
   `).join('');
   
@@ -91,7 +91,7 @@ function renderCart() {
   
   // 2. Calculate and render pricing totals summary
   const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-  const deliveryFee = subtotal > 150 ? 0 : 15; // Free delivery for orders over $150
+  const deliveryFee = subtotal > 5000 ? 0 : 150; // Free delivery for orders over ₹5,000
   const grandTotal = subtotal + deliveryFee;
   
   summaryContainer.innerHTML = `
@@ -99,20 +99,20 @@ function renderCart() {
       <h2 class="summary-title">Summary</h2>
       <div class="summary-row">
         <span>Subtotal</span>
-        <span>$${subtotal.toFixed(2)}</span>
+        <span>₹${subtotal.toLocaleString('en-IN')}</span>
       </div>
       <div class="summary-row">
         <span>Delivery</span>
-        <span>${deliveryFee === 0 ? 'Free' : `$${deliveryFee.toFixed(2)}`}</span>
+        <span>${deliveryFee === 0 ? 'Free' : `₹${deliveryFee.toLocaleString('en-IN')}`}</span>
       </div>
       ${deliveryFee > 0 ? `
         <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: -12px; margin-bottom: 12px; text-align: right;">
-          Free delivery on orders above $150.00
+          Free delivery on orders above ₹5,000.00
         </div>
       ` : ''}
       <div class="summary-row summary-row--total">
         <span>Total</span>
-        <span>$${grandTotal.toFixed(2)}</span>
+        <span>₹${grandTotal.toLocaleString('en-IN')}</span>
       </div>
       <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
     </div>

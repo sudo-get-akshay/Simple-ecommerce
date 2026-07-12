@@ -4,7 +4,7 @@ export const products = [
   {
     id: "simple-wireless-charger",
     name: "Simple Wireless Charger",
-    price: 89,
+    price: 3499,
     rating: 4.8,
     reviewsCount: 142,
     category: "charging",
@@ -13,7 +13,7 @@ export const products = [
     description: "Form meets function in the Simple Wireless Charger. Featuring a premium solid American walnut top, precision-milled aluminum base, and built-in MagSafe-compatible alignment magnets, it provides up to 15W of fast wireless power. The braided nylon cable adds extra durability, making it the perfect focal point for any minimalist desk setup.",
     images: [
       "https://images.unsplash.com/photo-1622445262465-2481c4574875?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1616440347437-b1c73416efc2?auto=format&fit=crop&q=80&w=600"
+      "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&q=80&w=600"
     ],
     specs: {
       "Material": "Solid Walnut, CNC Aluminum, Braided Nylon",
@@ -30,7 +30,7 @@ export const products = [
   {
     id: "simple-mechanical-keyboard",
     name: "Simple Mechanical Keyboard",
-    price: 189,
+    price: 8999,
     rating: 4.9,
     reviewsCount: 96,
     category: "workspace",
@@ -38,8 +38,8 @@ export const products = [
     shortDescription: "A compact 60% mechanical keyboard featuring silent linear switches and solid brass plate.",
     description: "The Simple Mechanical Keyboard is designed for quiet focus. It features a compact 60% layout to optimize desk space, silent linear switches factory-lubed for buttery smoothness, and an internal brass plate for a deep, muted sound signature. Encased in a solid CNC-milled anodized aluminum chassis, it is topped with custom dye-sublimated PBT keycaps.",
     images: [
-      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&q=80&w=600"
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1601445638532-3c6f6c3aa1d6?auto=format&fit=crop&q=80&w=600"
     ],
     specs: {
       "Layout": "60% ANSI Layout (61 keys)",
@@ -56,7 +56,7 @@ export const products = [
   {
     id: "simple-merino-desk-mat",
     name: "Simple Merino Desk Mat",
-    price: 59,
+    price: 2499,
     rating: 4.7,
     reviewsCount: 204,
     category: "workspace",
@@ -64,8 +64,8 @@ export const products = [
     shortDescription: "Soft, water-resistant desk mat made from premium 100% Merino wool felt.",
     description: "Protect your workspace and enhance mouse tracking with the Simple Merino Desk Mat. Made from 100% genuine Merino wool felt, it offers natural water resistance, thermal insulation, and a soft, comfortable surface for your wrists. The underside is lined with biodegradable natural rubber dots to ensure it stays firmly in place.",
     images: [
-      "https://images.unsplash.com/photo-1632292224971-0d45778bd364?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1616627547584-bf28cee262db?auto=format&fit=crop&q=80&w=600"
+      "https://images.unsplash.com/photo-1616627547584-bf28cee262db?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1603481588273-2f908a9a7a1b?auto=format&fit=crop&q=80&w=600"
     ],
     specs: {
       "Material": "100% Merino Wool Felt, Cork-Rubber Backing",
@@ -82,7 +82,7 @@ export const products = [
   {
     id: "simple-anc-headphones",
     name: "Simple ANC Headphones",
-    price: 249,
+    price: 14999,
     rating: 4.9,
     reviewsCount: 312,
     category: "audio",
@@ -90,8 +90,8 @@ export const products = [
     shortDescription: "Premium wireless over-ear headphones with custom hybrid Active Noise Cancellation.",
     description: "Escape the noise and immerse yourself in pure sound. The Simple ANC Headphones feature advanced hybrid active noise cancellation, custom-tuned 40mm beryllium drivers, and a comfortable, lightweight over-ear design. Constructed with memory foam ear cushions covered in vegan leather, it provides up to 45 hours of playback on a single charge.",
     images: [
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&q=80&w=600"
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=600"
     ],
     specs: {
       "Drivers": "40mm Beryllium Dynamic Drivers",
@@ -108,7 +108,7 @@ export const products = [
   {
     id: "simple-ergonomic-mouse",
     name: "Simple Ergonomic Mouse",
-    price: 79,
+    price: 3999,
     rating: 4.6,
     reviewsCount: 88,
     category: "workspace",
@@ -117,7 +117,7 @@ export const products = [
     description: "Designed to conform to your natural grip, the Simple Ergonomic Mouse features a hand-sculpted profile that reduces wrist strain during long working hours. Click buttons are equipped with silent switches that damp noise while retaining a tactile click. The solid stainless steel scroll wheel provides precise, weighted scrolling.",
     images: [
       "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&q=80&w=600"
+      "https://images.unsplash.com/photo-1613141411244-0e4ac259d217?auto=format&fit=crop&q=80&w=600"
     ],
     specs: {
       "Sensor": "High-precision Optical (800 - 4000 DPI)",
@@ -134,7 +134,7 @@ export const products = [
   {
     id: "simple-desk-organizer",
     name: "Simple Desk Organizer",
-    price: 49,
+    price: 2199,
     rating: 4.8,
     reviewsCount: 115,
     category: "workspace",
@@ -142,8 +142,8 @@ export const products = [
     shortDescription: "Modular desktop tray kit with aluminum base and solid oak dividers.",
     description: "Keep your workspace tidy with the modular Simple Desk Organizer. It features a heavy, sandblasted aluminum base tray and three solid oak partition blocks that slide along magnetic tracks. Customize the layout to store your pens, cards, keys, and phone in one elegant, cohesive station.",
     images: [
-      "https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=600"
+      "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?auto=format&fit=crop&q=80&w=600"
     ],
     specs: {
       "Material": "Anodized Aluminum Base, Solid White Oak",
@@ -158,7 +158,7 @@ export const products = [
   {
     id: "simple-smart-bottle",
     name: "Simple Smart Water Bottle",
-    price: 69,
+    price: 3299,
     rating: 4.5,
     reviewsCount: 74,
     category: "lifestyle",
@@ -183,7 +183,7 @@ export const products = [
   {
     id: "simple-ceramic-diffuser",
     name: "Simple Ceramic Diffuser",
-    price: 65,
+    price: 2999,
     rating: 4.8,
     reviewsCount: 189,
     category: "lifestyle",
@@ -208,7 +208,7 @@ export const products = [
   {
     id: "simple-leather-wallet",
     name: "Simple Leather Wallet",
-    price: 45,
+    price: 1999,
     rating: 4.7,
     reviewsCount: 220,
     category: "lifestyle",
@@ -233,7 +233,7 @@ export const products = [
   {
     id: "simple-monitor-stand",
     name: "Simple Monitor Stand",
-    price: 129,
+    price: 5999,
     rating: 4.9,
     reviewsCount: 84,
     category: "workspace",
@@ -241,8 +241,8 @@ export const products = [
     shortDescription: "Solid oak monitor riser designed to improve posture and clear desk clutter.",
     description: "Raise your monitor to ergonomic eye level while reclaiming valuable desk real estate. The Simple Monitor Stand is CNC-machined from solid American oak wood with reinforced steel legs. Underneath, it provides spacious storage to slide away your keyboard and mouse when the workday is finished.",
     images: [
-      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&q=80&w=600",
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=600"
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&q=80&w=600"
     ],
     specs: {
       "Material": "Solid American Oak, Powder-coated Steel Legs",
@@ -258,7 +258,7 @@ export const products = [
   {
     id: "simple-usb-hub",
     name: "Simple USB-C Hub",
-    price: 55,
+    price: 2799,
     rating: 4.6,
     reviewsCount: 103,
     category: "charging",
@@ -283,7 +283,7 @@ export const products = [
   {
     id: "simple-journal-set",
     name: "Simple Journal Set",
-    price: 39,
+    price: 1799,
     rating: 4.8,
     reviewsCount: 154,
     category: "lifestyle",
