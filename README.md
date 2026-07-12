@@ -4,11 +4,6 @@
 
 🔗 **Live Demo:** [Simple Live Experience](https://sudo-get-akshay.github.io/Simple-ecommerce) · **Code:** [GitHub Repository](https://github.com/sudo-get-akshay/Simple-ecommerce)
 
-## 📸 Screenshots
-| Home | Cart |
-|------|------|
-| ![Simple Home Screenshot](https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=400) | ![Simple Cart Screenshot](https://images.unsplash.com/photo-1632292224971-0d45778bd364?auto=format&fit=crop&q=80&w=400) |
-
 ## ✅ Features
 | Feature | Status |
 |---------|--------|
@@ -34,7 +29,6 @@ I designed the minimalist layout, CSS typography structure, and UX routes; AI he
 
 ## 📚 What I learned
 During this project, I learned how to integrate Clerk Authentication into a purely vanilla HTML/JS application using the browser SDK, manage complex cart state transitions with localStorage, and implement mobile-first grid components without any CSS libraries.
-🔗 [Website](https://thetapacademy.com) · [Placements](https://thetapacademy.com/placements) · [LinkedIn](https://in.linkedin.com/company/thetapacademy) · [YouTube](https://www.youtube.com/tapacademy)
 
 ---
 *⭐ If you liked this project, star the repo — it helps more students discover it.*
