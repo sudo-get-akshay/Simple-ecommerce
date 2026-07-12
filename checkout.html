@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure your purchase on Simple. Sign in to place your order.">
+  <title>Checkout — Simple</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>S</text></svg>">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Glassmorphism Navigation -->
+  <header class="header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="Simple Home">Simple.</a>
+      
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Shop</a>
+        <a href="products.html?category=workspace" class="nav-link">Workspace</a>
+        <a href="products.html?category=audio" class="nav-link">Audio</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button class="nav-icon-btn theme-toggle" aria-label="Toggle light/dark theme"></button>
+        
+        <!-- Cart Link -->
+        <a href="cart.html" class="nav-icon-btn" aria-label="View Shopping Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="cart-badge-count"></span>
+        </a>
+        
+        <!-- Clerk Authentication Container -->
+        <div id="user-button-container"></div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Sidebar -->
+  <div class="mobile-menu-overlay" aria-hidden="true"></div>
+  <aside class="mobile-menu" role="complementary" aria-label="Mobile Navigation Menu">
+    <button class="mobile-menu-close" aria-label="Close Navigation Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="products.html" class="mobile-nav-link">Shop All</a>
+      <a href="products.html?category=workspace" class="mobile-nav-link">Workspace</a>
+      <a href="products.html?category=audio" class="mobile-nav-link">Audio</a>
+      <a href="products.html?category=lifestyle" class="mobile-nav-link">Lifestyle</a>
+      <a href="cart.html" class="mobile-nav-link">My Cart</a>
+    </div>
+  </aside>
+
+  <!-- Checkout Secure Page Area -->
+  <main class="container section-padding" style="padding-top: 120px;" id="main-content">
+    <div id="checkout-page-container">
+      
+      <!-- 1. Authentication Guard Overlay (Clerk Sign-In Interface Target) -->
+      <section class="checkout-auth-guard" id="auth-guard-container" style="display: flex;">
+        <h1 class="checkout-auth-title">Secure Checkout</h1>
+        <p class="checkout-auth-subtitle">Login with Google to securely review and confirm your order placement.</p>
+        <div id="clerk-signin-mount">
+          <div style="display: inline-block; width: 30px; height: 30px; border: 2px solid var(--border-color); border-top-color: var(--accent-color); border-radius: 50%; animation: spin 1s infinite linear;"></div>
+          <p style="margin-top: 12px; color: var(--text-secondary); font-size: 0.85rem;">Contacting auth systems...</p>
+        </div>
+      </section>
+
+      <!-- 2. Secure Billing & Shipping Layout (Shown when logged in) -->
+      <div class="checkout-layout" id="checkout-form-container" style="display: none;">
+        <!-- Billing Form Left Panel -->
+        <section aria-labelledby="billing-heading">
+          <h2 id="billing-heading" class="sr-only">Billing Details</h2>
+          <form class="checkout-form" id="billing-form">
+            <div>
+              <h3 class="form-group-title">Contact Information</h3>
+              <div class="form-grid">
+                <div class="form-input-wrap">
+                  <label class="form-label" for="checkout-email">Email Address</label>
+                  <input type="email" id="checkout-email" class="form-input" placeholder="email@address.com" required>
+                </div>
+                <div class="form-input-wrap">
+                  <label class="form-label" for="checkout-name">Full Name</label>
+                  <input type="text" id="checkout-name" class="form-input" placeholder="John Doe" required>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="form-group-title">Shipping Address</h3>
+              <div class="form-grid">
+                <div class="form-input-wrap form-group-full">
+                  <label class="form-label" for="checkout-address">Street Address</label>
+                  <input type="text" id="checkout-address" class="form-input" placeholder="123 Minimalist Way" required>
+                </div>
+                <div class="form-input-wrap">
+                  <label class="form-label" for="checkout-city">City</label>
+                  <input type="text" id="checkout-city" class="form-input" placeholder="Bangalore" required>
+                </div>
+                <div class="form-input-wrap">
+                  <label class="form-label" for="checkout-zip">ZIP / Postal Code</label>
+                  <input type="text" id="checkout-zip" class="form-input" placeholder="560001" required>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="form-group-title">Payment Mode</h3>
+              <div style="background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 16px; font-size: 0.9rem; display: flex; align-items: center; gap: 12px;">
+                <input type="radio" id="payment-cod" name="payment" checked style="accent-color: var(--accent-color);">
+                <label for="payment-cod" style="font-weight: 500;">Simulated Cash on Delivery (Test Order)</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start; padding: 14px 40px;">Place Test Order</button>
+          </form>
+        </section>
+
+        <!-- Order Summary Details Right Panel -->
+        <aside aria-labelledby="summary-heading">
+          <div class="cart-summary-card">
+            <h2 id="summary-heading" class="summary-title">Order Summary</h2>
+            
+            <!-- Items list breakdown -->
+            <div class="checkout-summary-list" id="checkout-items-list" role="list">
+              <!-- Populated via js/checkout.js -->
+            </div>
+
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="checkout-subtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+              <span>Delivery</span>
+              <span id="checkout-delivery">$0.00</span>
+            </div>
+            <div class="summary-row summary-row--total">
+              <span>Grand Total</span>
+              <span id="checkout-total">$0.00</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Simple.</span>
+          <p class="footer-desc">Creating modern, premium tools and accessories designed to simplify your lifestyle and workspace.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Shop</h4>
+          <ul class="footer-links">
+            <li><a href="products.html" class="footer-link">All Products</a></li>
+            <li><a href="products.html?category=workspace" class="footer-link">Workspace</a></li>
+            <li><a href="products.html?category=audio" class="footer-link">Audio</a></li>
+            <li><a href="products.html?category=charging" class="footer-link">Charging</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Help Center</a></li>
+            <li><a href="#" class="footer-link">Shipping & Returns</a></li>
+            <li><a href="#" class="footer-link">Warranty Details</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Newsletter</a></li>
+            <li><a href="#" class="footer-link">Instagram</a></li>
+            <li><a href="#" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Simple. All rights reserved.</p>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+
+  <!-- Application Scripts -->
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/checkout.js"></script>
+</body>
+</html>

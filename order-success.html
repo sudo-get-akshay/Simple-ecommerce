@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your order on Simple has been successfully placed. Thank you for shopping with us.">
+  <title>Order Confirmed — Simple</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>S</text></svg>">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Glassmorphism Navigation -->
+  <header class="header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="logo" aria-label="Simple Home">Simple.</a>
+      
+      <nav class="nav-menu" role="navigation" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Shop</a>
+        <a href="products.html?category=workspace" class="nav-link">Workspace</a>
+        <a href="products.html?category=audio" class="nav-link">Audio</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button class="nav-icon-btn theme-toggle" aria-label="Toggle light/dark theme"></button>
+        
+        <!-- Cart Link -->
+        <a href="cart.html" class="nav-icon-btn" aria-label="View Shopping Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="cart-badge-count"></span>
+        </a>
+        
+        <!-- Clerk Authentication Container -->
+        <div id="user-button-container"></div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Sidebar -->
+  <div class="mobile-menu-overlay" aria-hidden="true"></div>
+  <aside class="mobile-menu" role="complementary" aria-label="Mobile Navigation Menu">
+    <button class="mobile-menu-close" aria-label="Close Navigation Menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="products.html" class="mobile-nav-link">Shop All</a>
+      <a href="products.html?category=workspace" class="mobile-nav-link">Workspace</a>
+      <a href="products.html?category=audio" class="mobile-nav-link">Audio</a>
+      <a href="products.html?category=lifestyle" class="mobile-nav-link">Lifestyle</a>
+      <a href="cart.html" class="mobile-nav-link">My Cart</a>
+    </div>
+  </aside>
+
+  <!-- Success Confirmation Content -->
+  <main class="container section-padding" style="padding-top: 120px;" id="main-content">
+    <div class="success-card" id="success-card">
+      <div class="success-icon-wrap" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10" stroke="currentColor"></circle>
+          <path class="success-checkmark" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" stroke="currentColor"></path>
+        </svg>
+      </div>
+      
+      <h1 class="success-title">Order Placed</h1>
+      <p class="success-message">Thank you for your order. We have received your order details and are preparing shipment.</p>
+      
+      <!-- Order details box -->
+      <section class="order-details-box" aria-label="Order Details Summary">
+        <div class="order-detail-line">
+          <span class="order-detail-label">Order Reference</span>
+          <span class="order-detail-val" id="success-order-ref">SMP-XXXXXX</span>
+        </div>
+        <div class="order-detail-line">
+          <span class="order-detail-label">Confirmation Sent To</span>
+          <span class="order-detail-val" id="success-email">email@domain.com</span>
+        </div>
+        <div class="order-detail-line">
+          <span class="order-detail-label">Total Amount Paid</span>
+          <span class="order-detail-val" id="success-total">$0.00</span>
+        </div>
+        <div class="order-detail-line">
+          <span class="order-detail-label">Shipping Method</span>
+          <span class="order-detail-val">Standard Delivery (3-5 Days)</span>
+        </div>
+      </section>
+
+      <a href="products.html" class="btn btn-primary">Continue Shopping</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo">Simple.</span>
+          <p class="footer-desc">Creating modern, premium tools and accessories designed to simplify your lifestyle and workspace.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Shop</h4>
+          <ul class="footer-links">
+            <li><a href="products.html" class="footer-link">All Products</a></li>
+            <li><a href="products.html?category=workspace" class="footer-link">Workspace</a></li>
+            <li><a href="products.html?category=audio" class="footer-link">Audio</a></li>
+            <li><a href="products.html?category=charging" class="footer-link">Charging</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Support</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Help Center</a></li>
+            <li><a href="#" class="footer-link">Shipping & Returns</a></li>
+            <li><a href="#" class="footer-link">Warranty Details</a></li>
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Newsletter</a></li>
+            <li><a href="#" class="footer-link">Instagram</a></li>
+            <li><a href="#" class="footer-link">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Simple. All rights reserved.</p>
+        <div style="display: flex; gap: 20px;">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    /* Premium drawing animation for checkmark */
+    .success-checkmark {
+      stroke-dasharray: 20;
+      stroke-dashoffset: 20;
+      animation: draw 0.6s ease-out 0.3s forwards;
+    }
+    
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+
+  <!-- Application Scripts -->
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/order-success.js"></script>
+</body>
+</html>
